@@ -1,4 +1,4 @@
-package learning.problemsolving;
+package learning.problemsolving.problems;
 
 public class NegativePostiveArrangement {
 
