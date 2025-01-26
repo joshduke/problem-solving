@@ -28,9 +28,8 @@ public class TreeHeightFinder {
         }
     }
 
-    private TreeNode buildTreeStructure(TreeNode[] treeNodes, String treeInput) {
+    public TreeNode buildTreeStructure(TreeNode[] treeNodes, String treeInput) {
         TreeNode rootNode = null;
-
         int index = 0;
         for(String value : treeInput.split(" ")) {
             int int_value = Integer.parseInt(value);
@@ -42,9 +41,10 @@ public class TreeHeightFinder {
 
             index++;
         }
+        return rootNode;
     }
 
-    private int computeTreeHeight(TreeNode rootNode) {
+    public int computeTreeHeight(TreeNode rootNode) {
         if(rootNode.getChildrens() == null || rootNode.getChildrens().isEmpty()) {
             // Leaf
             return 1;
@@ -61,7 +61,7 @@ public class TreeHeightFinder {
         }
     }
 
-    private TreeNode[] createDefaultTreeNodes(int nodesCount) {
+    public TreeNode[] createDefaultTreeNodes(int nodesCount) {
         TreeNode[] treeNodes = new TreeNode[nodesCount];
         for(int i = 0; i < nodesCount; i++) {
             treeNodes[i] = new TreeNode(i);
